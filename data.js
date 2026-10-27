@@ -75,6 +75,30 @@ const PROFILE = {
           },
         },
       ],
+      // Shorter list for the printed CV (SBI FX & OANDA share the same role)
+      cvProjects: [
+        {
+          name: "SBI FX & OANDA — Mobile Trading",
+          desc: {
+            en: "Two FX trading apps for Japanese clients (Flutter). Owned the order module and the app base: Clean Architecture design, core modules, monorepo with Melos.",
+            vi: "Hai ứng dụng giao dịch FX cho khách hàng Nhật Bản (Flutter). Phụ trách module đặt lệnh (order) và app base: thiết kế kiến trúc theo Clean Architecture, xây dựng các module core, tổ chức monorepo với Melos.",
+          },
+        },
+        {
+          name: "Coincheck — Mobile Trading",
+          desc: {
+            en: "Crypto trading app for Japanese clients (native Android & iOS). Owned the CFD order module.",
+            vi: "Ứng dụng giao dịch tiền mã hóa cho khách hàng Nhật Bản (Android & iOS native). Phụ trách module đặt lệnh CFD.",
+          },
+        },
+        {
+          name: { en: "AI Test Automation", vi: "Automation Test với AI" },
+          desc: {
+            en: "Internal project — AI-powered automated testing for mobile apps (Python, Maestro).",
+            vi: "Dự án nội bộ — tự động hóa kiểm thử ứng dụng mobile bằng AI (Python, Maestro).",
+          },
+        },
+      ],
       tech: ["Flutter", "Clean Architecture", "Melos", "Android", "iOS", "Python", "Maestro"],
     },
     {

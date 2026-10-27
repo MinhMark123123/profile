@@ -310,8 +310,18 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0
   .topbar, .no-print, #view-profile { display: none !important; }
   #view-cv { display: block !important; }
   .cv-wrap { padding: 0; width: 100%; }
-  .cv { box-shadow: none; padding: 0; border-radius: 0; }
+  .cv { box-shadow: none; padding: 0; border-radius: 0; font-size: 9.4pt; line-height: 1.42; }
   .placeholder { background: none; }
+  .cv-header { gap: 1rem; }
+  .cv-header h1 { font-size: 20pt; }
+  .cv-photo { width: 70px; height: 70px; }
+  .cv-contact { font-size: 8.6pt; }
+  .cv h2 { font-size: 8pt; margin: 0.85rem 0 0.4rem; padding-bottom: 0.15rem; }
+  .cv-job { margin-bottom: 0.55rem; }
+  .cv ul { margin: 0.15rem 0; }
+  .cv li { margin-bottom: 0.05rem; }
+  .cv-tech, .cv-job-head span { font-size: 8.4pt; }
+  .cv-skills { display: grid; grid-template-columns: 1fr 1fr; gap: 0.1rem 1.5rem; }
 }
 
 /* ============================================================

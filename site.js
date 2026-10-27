@@ -114,7 +114,7 @@ function renderCV() {
   const jobs = P.experience.map((e) => `
     <div class="cv-job">
       <div class="cv-job-head"><strong>${ph(e.title)} · ${esc(e.company)}</strong><span>${fmtYM(e.start)} – ${fmtYM(e.end)}</span></div>
-      <ul>${(e.projects || []).map((p) => `<li><strong>${esc(L(p.name))}</strong> — ${ph(p.desc)}</li>`).join("")}</ul>
+      <ul>${(e.cvProjects || e.projects || []).map((p) => `<li><strong>${esc(L(p.name))}</strong> — ${ph(p.desc)}</li>`).join("")}</ul>
       ${e.tech?.length ? `<div class="cv-tech">${e.tech.map(esc).join(" · ")}</div>` : ""}
     </div>`).join("");
 
@@ -142,7 +142,7 @@ function renderCV() {
     <h2>${t("cv.experience")}</h2>${jobs}
     ${os ? `<h2>${t("cv.openSource")}</h2>${os}` : ""}
     <h2>${t("cv.skills")}</h2>
-    ${P.skills.map((g) => `<div class="cv-skill"><strong>${esc(L(g.group))}:</strong> ${g.items.map((x) => esc(L(x))).join(", ")}</div>`).join("")}
+    <div class="cv-skills">${P.skills.map((g) => `<div class="cv-skill"><strong>${esc(L(g.group))}:</strong> ${g.items.map((x) => esc(L(x))).join(", ")}</div>`).join("")}</div>
     <h2>${t("cv.education")}</h2>
     ${P.education.map((e) => `<div class="cv-job-head"><strong>${ph(e.degree)} · ${esc(L(e.school))}</strong><span>${esc(e.start)} – ${esc(e.end)}</span></div>`).join("")}`;
 }
