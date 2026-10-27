@@ -8,7 +8,7 @@ const ph = (v) => { const s = L(v); return isPlaceholder(s) ? `<span class="plac
 const chips = (list, cls = "chip") => list.map((x) => `<span class="${cls}">${esc(L(x))}</span>`).join("");
 
 const telHref = () => "tel:+84" + P.phone.replace(/\D/g, "").replace(/^0/, "");
-const short = (url) => url.replace(/^https?:\/\/(www\.)?/, "");
+const short = (url) => url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
 
 // ---------- Routing (#cv shows the printable CV) ----------
 function route() {
@@ -106,6 +106,7 @@ function renderCV() {
     esc(L(P.location)),
     `<a href="mailto:${esc(P.email)}">${esc(P.email)}</a>`,
     `<a href="${telHref()}">${esc(P.phone)}</a>`,
+    P.website && `<a href="${esc(P.website)}">${esc(short(P.website))}</a>`,
     `<a href="${esc(P.linkedin)}">${esc(short(P.linkedin))}</a>`,
     P.github && `<a href="${esc(P.github)}">${esc(short(P.github))}</a>`,
   ].filter(Boolean).map((c) => `<span>${c}</span>`).join("");

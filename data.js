@@ -15,6 +15,7 @@ const PROFILE = {
   location: { en: "Ho Chi Minh City, Vietnam", vi: "TP. Hồ Chí Minh, Việt Nam" },
   email: "minhnguyen.shell@gmail.com",
   phone: "0972 779 941",
+  website: "https://minhmark123123.github.io/profile/",
   linkedin: "https://www.linkedin.com/in/minh-nguyen-05226011a",
   github: "https://github.com/MinhMark123123",
 
