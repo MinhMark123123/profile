@@ -2,7 +2,7 @@
 
 Personal profile & CV site — Flutter · Android · iOS.
 
-**Live:** https://minhmark123123.github.io/<repo-name>/
+**Live:** https://minhmark123123.github.io/profile
 
 - `index.html` — profile page (parallax) and printable CV (`#cv`)
 - English by default, Vietnamese via the EN / VI switch
