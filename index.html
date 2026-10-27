@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minh Nguyen — Senior Mobile Developer</title>
+  <meta name="description" content="Minh Nguyen — Senior Mobile Developer (Flutter, Android, iOS) with 10+ years of experience. Author of the MAAC MVVM framework for Flutter.">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Minh Nguyen — Senior Mobile Developer">
+  <meta property="og:description" content="Flutter · Android · iOS · 10+ years · Author of MAAC (Flutter MVVM framework).">
+  <meta name="theme-color" content="#0b0f14">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="site">
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="logo">MN</span>
+      <span class="brand-name">Minh Nguyen</span>
+    </a>
+    <nav class="nav">
+      <a href="#" data-view="profile" data-i18n="nav.profile">Profile</a>
+      <a href="#cv" data-view="cv" data-i18n="nav.cv">CV</a>
+    </nav>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button data-lang="en" aria-pressed="true">EN</button>
+      <button data-lang="vi" aria-pressed="false">VI</button>
+    </div>
+  </header>
+
+  <!-- ===================== PROFILE ===================== -->
+  <main id="view-profile" class="view active">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="layer grid-lines" data-speed="0.08"></div>
+        <div class="layer orb orb-1" data-speed="0.35" data-depth="18"></div>
+        <div class="layer orb orb-2" data-speed="0.18" data-depth="-26"></div>
+        <div class="layer orb orb-3" data-speed="0.5" data-depth="34"></div>
+        <div class="layer shapes" data-speed="0.25" data-depth="-12">
+          <span class="shape s1"></span><span class="shape s2"></span><span class="shape s3"></span>
+        </div>
+      </div>
+
+      <div class="hero-content" data-speed="-0.12">
+        <div class="avatar-ring" id="heroAvatarWrap"><img id="heroAvatar" alt="Minh Nguyen" width="160" height="160"></div>
+        <span class="pill"><span class="pulse"></span><span data-i18n="profile.open">Open to new opportunities</span></span>
+        <h1 id="heroName">Minh Nguyen</h1>
+        <p class="hero-headline"><span id="heroHeadline" class="gradient-text"></span></p>
+        <div class="chips center" id="heroStack"></div>
+        <p class="hero-location" id="heroLocation"></p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#cv" data-i18n="profile.viewCv">View CV</a>
+          <a class="btn btn-ghost" id="heroEmail" data-i18n="profile.email">Email me</a>
+          <a class="btn btn-ghost" id="heroLinkedin" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn btn-ghost" id="heroGithub" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true"><span></span><small data-i18n="profile.scroll">Scroll</small></div>
+    </section>
+
+    <section class="container stats" id="stats"></section>
+
+    <section class="container section">
+      <h2 class="section-title reveal" data-i18n="profile.about">About</h2>
+      <p class="about reveal" id="about"></p>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-row" data-marquee="1">FLUTTER · ANDROID · iOS · KOTLIN · DART · UNITY · MVVM · CLEAN ARCHITECTURE · AI TESTING · FLUTTER · ANDROID · iOS · KOTLIN · DART · UNITY ·</div>
+      <div class="marquee-row outline" data-marquee="-1">MELOS · MAESTRO · PHOTON · REACT NATIVE · RIVERPOD · GET IT · MELOS · MAESTRO · PHOTON · REACT NATIVE · RIVERPOD · GET IT ·</div>
+    </div>
+
+    <section class="container section">
+      <h2 class="section-title reveal" data-i18n="profile.experience">Experience</h2>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section class="container section">
+      <h2 class="section-title reveal" data-i18n="profile.openSource">Open source</h2>
+      <div id="openSource"></div>
+    </section>
+
+    <section class="container section">
+      <h2 class="section-title reveal" data-i18n="profile.skills">Skills</h2>
+      <div class="skills" id="skills"></div>
+    </section>
+
+    <section class="container section">
+      <h2 class="section-title reveal" data-i18n="profile.education">Education</h2>
+      <div id="education"></div>
+    </section>
+
+    <section class="contact">
+      <div class="contact-bg" aria-hidden="true"><div class="orb orb-4"></div></div>
+      <div class="container contact-inner reveal">
+        <h2 data-i18n="profile.contactTitle">Let’s build something together</h2>
+        <p data-i18n="profile.contactText"></p>
+        <div class="hero-actions" id="contactLinks"></div>
+      </div>
+    </section>
+
+    <footer class="footer container">
+      <span>© <span id="year">2026</span> Minh Nguyen</span>
+      <span data-i18n="footer.built"></span>
+    </footer>
+  </main>
+
+  <!-- ===================== CV ===================== -->
+  <main id="view-cv" class="view">
+    <div class="container cv-wrap">
+      <div class="cv-toolbar no-print">
+        <h1 data-i18n="nav.cv">CV</h1>
+        <div class="row">
+          <label class="toggle"><input type="checkbox" id="cvPhoto"><span data-i18n="cv.photo">Show photo</span></label>
+          <button class="btn btn-primary" id="printBtn" data-i18n="cv.download">Download PDF</button>
+        </div>
+      </div>
+      <article id="cvDoc" class="cv"></article>
+    </div>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="i18n.js"></script>
+  <script src="common.js"></script>
+  <script src="site.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

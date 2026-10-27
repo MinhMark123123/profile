@@ -1,0 +1,11 @@
+# Private job-search toolkit — runs locally only, never published
+toolkit/
+
+# Personal screenshots (social insurance data)
+Screenshot_*
+*.jpg
+*.jpeg
+# …except the processed avatar used by the site
+!avatar-web.jpg
+
+.DS_Store
