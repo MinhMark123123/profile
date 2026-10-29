@@ -8,7 +8,7 @@
 
 const PROFILE = {
   name: "Minh Nguyen",
-  avatar: "avatar-web.jpg",
+  avatar: "assets/img/avatar-web.jpg",
   avatarOnCv: true, // default for the CV "Show photo" toggle
   headline: "Senior Mobile Developer",
   stack: ["Flutter", "Android", "iOS", "Unity"],
