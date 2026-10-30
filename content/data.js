@@ -27,7 +27,7 @@ const PROFILE = {
       "Most recently built FX and crypto trading apps for Japanese clients (SBI FX, OANDA, Coincheck), owning the order modules, " +
       "and an AI-powered test automation project (Python, Maestro). " +
       "Author of MAAC, an open-source MVVM framework for Flutter published on pub.dev. " +
-      "Open to mobile engineering, technical lead, test automation and AI-related roles.",
+      "Open to mobile engineering, technical lead and test automation roles.",
     vi:
       "Senior Mobile Developer với hơn 10 năm kinh nghiệm (từ 2014) trên Flutter, Android native (Kotlin) và iOS. " +
       "Từng lead Mobile Platform Team tại OneMount Group (VinID) và team mobile tại Vietlink. " +
@@ -35,7 +35,7 @@ const PROFILE = {
       "Gần đây phát triển các ứng dụng giao dịch FX và tiền mã hóa cho khách hàng Nhật Bản (SBI FX, OANDA, Coincheck), phụ trách module đặt lệnh, " +
       "cùng dự án tự động hóa kiểm thử bằng AI (Python, Maestro). " +
       "Tác giả MAAC — framework MVVM mã nguồn mở cho Flutter trên pub.dev. " +
-      "Sẵn sàng cho các vị trí phát triển mobile, technical lead, test automation và các vai trò liên quan đến AI.",
+      "Sẵn sàng cho các vị trí phát triển mobile, technical lead và test automation.",
   },
 
   experience: [
@@ -259,7 +259,7 @@ const PROFILE = {
   skills: [
     { group: "Mobile", items: ["Flutter", "Dart", "Android (Kotlin)", "iOS", "React Native bridge", "Flutter add-to-app"] },
     { group: { en: "Architecture", vi: "Kiến trúc" }, items: ["MVVM", "Clean Architecture", "Modular architecture", "Monorepo (Melos)", "Multi-repo", "Code generation", "GetIt", "Riverpod"] },
-    { group: { en: "Testing & AI", vi: "Kiểm thử & AI" }, items: ["Maestro", "Python", { en: "AI-powered test automation", vi: "Tự động hóa kiểm thử bằng AI" }] },
+    { group: { en: "Testing & Automation", vi: "Kiểm thử & Tự động hóa" }, items: ["Maestro", "Python", { en: "AI-powered test automation", vi: "Tự động hóa kiểm thử bằng AI" }] },
     { group: "Game / VR", items: ["Unity", "C#", "Photon", "Oculus (Meta) VR"] },
     { group: { en: "Domains", vi: "Lĩnh vực" }, items: [{ en: "FX & crypto trading", vi: "Giao dịch FX & tiền mã hóa" }, { en: "B2B e-commerce", vi: "TMĐT B2B" }, "POS", "Loyalty", "Proptech"] },
     { group: { en: "Languages", vi: "Ngôn ngữ" }, items: [{ en: "Vietnamese (native)", vi: "Tiếng Việt (bản ngữ)" }, { en: "English (basic communication)", vi: "Tiếng Anh (giao tiếp cơ bản)" }] },
