@@ -295,7 +295,8 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0
   font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: #0f8a72;
   border-bottom: 1px solid #e4e8ec; padding-bottom: 0.3rem; margin: 1.5rem 0 0.75rem;
 }
-.cv-job { margin-bottom: 1rem; break-inside: avoid; }
+.cv-job, .cv-keep { break-inside: avoid; }
+.cv-job { margin-bottom: 1rem; }
 .cv-job-head { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 .cv-job-head span { color: #59636e; font-size: 0.85rem; font-variant-numeric: tabular-nums; }
 .cv ul { margin: 0.35rem 0; padding-left: 1.1rem; }

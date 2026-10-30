@@ -111,19 +111,24 @@ function renderCV() {
     P.github && `<a href="${esc(P.github)}">${esc(short(P.github))}</a>`,
   ].filter(Boolean).map((c) => `<span>${c}</span>`).join("");
 
+  // Keep a section heading on the same page as its first entry when printing
+  const section = (title, items) => items.length
+    ? `<div class="cv-keep"><h2>${title}</h2>${items[0]}</div>${items.slice(1).join("")}`
+    : "";
+
   const jobs = P.experience.map((e) => `
     <div class="cv-job">
       <div class="cv-job-head"><strong>${ph(e.title)} · ${esc(e.company)}</strong><span>${fmtYM(e.start)} – ${fmtYM(e.end)}</span></div>
       <ul>${(e.cvProjects || e.projects || []).map((p) => `<li><strong>${esc(L(p.name))}</strong> — ${ph(p.desc)}</li>`).join("")}</ul>
       ${e.tech?.length ? `<div class="cv-tech">${e.tech.map(esc).join(" · ")}</div>` : ""}
-    </div>`).join("");
+    </div>`);
 
   const os = (P.openSource || []).map((o) => `
     <div class="cv-job">
       <div class="cv-job-head"><strong>${esc(L(o.name))}</strong><span><a href="${esc(o.link)}">${esc(short(o.link))}</a></span></div>
       <p>${esc(L(o.desc))}</p>
       <div class="cv-tech">${(o.packages || []).map((p) => esc(p.name)).join(" · ")}</div>
-    </div>`).join("");
+    </div>`);
 
   const showPhoto = P.avatar && store.get("cvPhoto", P.avatarOnCv);
   $("#cvPhoto").checked = !!showPhoto;
@@ -139,8 +144,8 @@ function renderCV() {
       </div>
     </header>
     <h2>${t("cv.summary")}</h2><p>${esc(L(P.summary))}</p>
-    <h2>${t("cv.experience")}</h2>${jobs}
-    ${os ? `<h2>${t("cv.openSource")}</h2>${os}` : ""}
+    ${section(t("cv.experience"), jobs)}
+    ${section(t("cv.openSource"), os)}
     <h2>${t("cv.skills")}</h2>
     <div class="cv-skills">${P.skills.map((g) => `<div class="cv-skill"><strong>${esc(L(g.group))}:</strong> ${g.items.map((x) => esc(L(x))).join(", ")}</div>`).join("")}</div>
     <h2>${t("cv.education")}</h2>
